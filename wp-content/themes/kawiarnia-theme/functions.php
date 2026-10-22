@@ -66,11 +66,20 @@ function kawiarnia_scripts() {
         null
     );
 
-    // Główny skrypt JS
+    // Biblioteka Anime.js do płynnych mikro-animacji
+    wp_enqueue_script(
+        'animejs',
+        'https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js',
+        array(),
+        '3.2.1',
+        true
+    );
+
+    // Główny skrypt JS z zależnością do Anime.js
     wp_enqueue_script(
         'kawiarnia-main-js',
         get_template_directory_uri() . '/assets/js/main.js',
-        array(),
+        array( 'animejs' ),
         filemtime( get_template_directory() . '/assets/js/main.js' ),
         true
     );
