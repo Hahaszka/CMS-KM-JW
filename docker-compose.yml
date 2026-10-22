@@ -20,7 +20,7 @@ services:
     depends_on:
       - db
     ports:
-      - "8081:80"
+      - "1234:80"
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wp_user

@@ -15,8 +15,8 @@ Projekt autorskiego motywu WordPress i sklepu internetowego realizowany w ramach
 * **`wordpress:cli-php8.2`** – narzędzie WP-CLI do automatyzacji instalacji i konfiguracji.
 
 ### Porty i dostęp
-* **Sklep:** [http://localhost:8081](http://localhost:8081) *(port 8081 ze względu na lokalne usługi systemowe)*
-* **Panel administracyjny:** [http://localhost:8081/wp-admin](http://localhost:8081/wp-admin)
+* **Sklep:** [http://localhost:1234](http://localhost:1234)
+* **Panel administracyjny:** [http://localhost:1234/wp-admin](http://localhost:1234/wp-admin)
   * Użytkownik: `admin`
   * Hasło: `admin_password123`
 * **MySQL:** `localhost:3306` (baza: `wordpress`, użytkownik: `wp_user` / `wp_password`)
