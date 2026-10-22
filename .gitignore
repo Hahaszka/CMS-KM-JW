@@ -1,0 +1,21 @@
+# Ignoruj wszystko w wp-content...
+wp-content/*
+
+# ...poza własnym motywem i własnymi pluginami
+!wp-content/themes/
+wp-content/themes/*
+!wp-content/themes/kawiarnia-theme/
+
+!wp-content/plugins/
+wp-content/plugins/*
+!wp-content/plugins/kawiarnia-sheets/
+!wp-content/plugins/kawiarnia-ai/
+
+# Pliki wrażliwe i śmieci systemowe
+*.log
+node_modules/
+vendor/
+*.key
+credentials*.json
+.env
+docker-compose.override.yml
