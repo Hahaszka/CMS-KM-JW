@@ -19,8 +19,9 @@ get_header();
     </div>
 </div>
 
-<!-- Hero Section -->
+<!-- Hero Section with Ambient Coffee Animation -->
 <section class="hero-section">
+    <canvas id="coffee-hero-canvas" class="hero-canvas" aria-hidden="true"></canvas>
     <div class="site-container hero-inner">
         <div class="hero-label">Rzemieślnicza Palarnia Kawy</div>
         <h1 class="hero-title">Ziarna z plantacji, które znamy z imienia</h1>

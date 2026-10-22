@@ -279,20 +279,57 @@ input[type="submit"]:hover {
 }
 
 /* ==========================================================================
-   Hero Section
+   Hero Section (z animowanym tłem kawowym)
    ========================================================================== */
 .hero-section {
-    background: radial-gradient(circle at 50% 25%, #2a1910 0%, #140b07 100%);
+    background: radial-gradient(circle at 50% 25%, #2e1a11 0%, #120905 100%);
     color: #ffffff;
-    padding: 95px 0 80px 0;
+    padding: 100px 0 85px 0;
     text-align: center;
     position: relative;
+    overflow: hidden;
     border-bottom: 1px solid var(--c-border-dark);
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(184, 103, 40, 0.12) 0%, transparent 60%);
+    animation: cremaPulse 12s infinite alternate ease-in-out;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes cremaPulse {
+    0% {
+        transform: scale(0.9) translate(0, 0);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1.15) translate(2%, 4%);
+        opacity: 0.95;
+    }
+}
+
+.hero-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .hero-inner {
     max-width: 820px;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
     animation: fadeInUp 0.6s ease-out;
 }
 
