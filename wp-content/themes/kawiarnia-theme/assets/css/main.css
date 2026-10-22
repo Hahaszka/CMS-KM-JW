@@ -1,0 +1,519 @@
+/**
+ * Kawiarnia Theme - Main Stylesheet
+ */
+
+:root {
+    --color-primary: #3b2219;
+    --color-primary-dark: #23140e;
+    --color-accent: #c88a4b;
+    --color-accent-hover: #b0753b;
+    --color-bg: #faf7f2;
+    --color-surface: #ffffff;
+    --color-text: #2c2523;
+    --color-text-muted: #6b635f;
+    --color-border: #e8e2d8;
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --shadow-sm: 0 2px 6px rgba(43, 24, 16, 0.05);
+    --shadow-md: 0 8px 24px rgba(43, 24, 16, 0.08);
+    --shadow-lg: 0 16px 36px rgba(43, 24, 16, 0.12);
+    --transition: all 0.25s ease;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.65;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-accent-hover);
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+.site-header {
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.site-branding .site-title {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+}
+
+.site-branding .site-title a {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.site-branding .site-description {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+}
+
+.main-navigation ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    align-items: center;
+}
+
+.main-navigation ul li a {
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 6px 0;
+    position: relative;
+}
+
+.main-navigation ul li a:hover {
+    color: var(--color-accent);
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero-section {
+    background: linear-gradient(135deg, #2b1810 0%, #44271c 100%);
+    color: #fff;
+    padding: 90px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-inner {
+    max-width: 800px;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(200, 138, 75, 0.25);
+    color: #f7d2aa;
+    border: 1px solid rgba(200, 138, 75, 0.4);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    color: #ffffff;
+    margin-bottom: 1.2rem;
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    color: #dfd7cf;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+}
+
+.btn-primary {
+    background: var(--color-accent);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: var(--color-accent-hover);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(200, 138, 75, 0.35);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* ==========================================================================
+   Features Section (3 klocki - wireframe)
+   ========================================================================== */
+.features-section {
+    padding: 70px 0;
+}
+
+.section-title {
+    margin-bottom: 40px;
+}
+
+.section-title.text-center {
+    text-align: center;
+}
+
+.section-title h2 {
+    font-size: 2.1rem;
+    margin-bottom: 8px;
+}
+
+.section-title p {
+    color: var(--color-text-muted);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+}
+
+.feature-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 36px 28px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-accent);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    color: var(--color-accent);
+}
+
+.feature-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   Posts Grid (Cards)
+   ========================================================================== */
+.latest-posts-section, .page-layout, .single-layout {
+    padding: 60px 0;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.kawiarnia-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.kawiarnia-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.card-thumbnail img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-meta {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-bottom: 10px;
+    display: flex;
+    gap: 12px;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.card-title a {
+    color: var(--color-primary);
+}
+
+.card-title a:hover {
+    color: var(--color-accent);
+}
+
+.card-body {
+    color: var(--color-text-muted);
+    font-size: 0.92rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.card-footer .btn-read-more {
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--color-accent);
+}
+
+/* ==========================================================================
+   Newsletter Box (wireframe)
+   ========================================================================== */
+.newsletter-section {
+    padding: 40px 0 80px 0;
+}
+
+.newsletter-box {
+    background: var(--color-primary);
+    color: #ffffff;
+    border-radius: var(--radius-lg);
+    padding: 48px;
+    text-align: center;
+}
+
+.newsletter-box h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.newsletter-box p {
+    color: #dfd7cf;
+    margin-bottom: 24px;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.newsletter-form input[type="email"] {
+    flex-grow: 1;
+    padding: 12px 18px;
+    border-radius: var(--radius-sm);
+    border: none;
+    font-size: 0.95rem;
+}
+
+.newsletter-form input[type="email"]:focus {
+    outline: 2px solid var(--color-accent);
+}
+
+/* ==========================================================================
+   Single Post & Page Layout
+   ========================================================================== */
+.single-post, .single-page-article {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 40px;
+    box-shadow: var(--shadow-sm);
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.post-meta-top {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: 14px;
+    display: flex;
+    gap: 16px;
+}
+
+.entry-title {
+    font-size: 2.4rem;
+    margin-bottom: 24px;
+}
+
+.post-featured-image, .page-featured-image {
+    margin-bottom: 28px;
+}
+
+.post-featured-image img, .page-featured-image img {
+    width: 100%;
+    border-radius: var(--radius-sm);
+    max-height: 450px;
+    object-fit: cover;
+}
+
+.entry-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.entry-content p {
+    margin-bottom: 1.5rem;
+}
+
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   404 Page
+   ========================================================================== */
+.error-404-container {
+    padding: 90px 0;
+}
+
+.error-404-content {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 50px 30px;
+    box-shadow: var(--shadow-sm);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.error-code {
+    font-size: 5rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-accent);
+    display: block;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.error-actions {
+    margin: 28px 0;
+}
+
+.error-search input[type="search"] {
+    padding: 10px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+    background: #1e110b;
+    color: #beaba1;
+    padding: 50px 0 25px 0;
+    margin-top: auto;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer-info h3 {
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    font-size: 0.85rem;
+    text-align: center;
+}
