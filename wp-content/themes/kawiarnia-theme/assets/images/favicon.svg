@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+    <defs>
+        <radialGradient id="coffeeBg" cx="50%" cy="30%" r="70%">
+            <stop offset="0%" stop-color="#2a1910" />
+            <stop offset="100%" stop-color="#0f0704" />
+        </radialGradient>
+        <linearGradient id="beanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#e08e48" />
+            <stop offset="60%" stop-color="#b86728" />
+            <stop offset="100%" stop-color="#803e12" />
+        </linearGradient>
+    </defs>
+    <!-- Background squircle -->
+    <rect x="4" y="4" width="120" height="120" rx="32" fill="url(#coffeeBg)" stroke="#b86728" stroke-width="3" stroke-opacity="0.4" />
+    
+    <!-- Outer coffee bean body -->
+    <path d="M64 22 C84 22 102 38 102 64 C102 90 84 106 64 106 C44 106 26 90 26 64 C26 38 44 22 64 22 Z" 
+          fill="url(#beanGradient)" 
+          transform="rotate(-26 64 64)" />
+          
+    <!-- Characteristic coffee bean center fissure -->
+    <path d="M64 28 C74 44 54 60 74 76 C84 84 64 96 64 100" 
+          stroke="#1b0e07" 
+          stroke-width="5" 
+          stroke-linecap="round" 
+          fill="none" 
+          transform="rotate(-26 64 64)" />
+</svg>
