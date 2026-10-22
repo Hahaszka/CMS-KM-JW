@@ -58,10 +58,10 @@ function kawiarnia_scripts() {
         filemtime( get_template_directory() . '/assets/css/main.css' )
     );
 
-    // Czcionki Google Fonts (Inter + Playfair Display)
+    // Czcionki Google Fonts (Plus Jakarta Sans + Playfair Display)
     wp_enqueue_style(
         'kawiarnia-fonts',
-        'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap',
+        'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap',
         array(),
         null
     );
