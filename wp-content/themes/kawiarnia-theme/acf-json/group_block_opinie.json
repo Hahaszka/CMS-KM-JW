@@ -1,0 +1,61 @@
+{
+    "key": "group_block_opinie",
+    "title": "Blok: Opinie Klientów",
+    "fields": [
+        {
+            "key": "field_opinie_eyebrow",
+            "label": "Nadtytuł sekcji",
+            "name": "eyebrow",
+            "type": "text",
+            "default_value": "Społeczność Kawowa"
+        },
+        {
+            "key": "field_opinie_title",
+            "label": "Tytuł sekcji",
+            "name": "title",
+            "type": "text",
+            "required": 1,
+            "default_value": "Co mówią o naszych wypałach?"
+        },
+        {
+            "key": "field_opinie_description",
+            "label": "Opis sekcji",
+            "name": "description",
+            "type": "text",
+            "default_value": "Rzeczywiste oceny i wrażenia sensoryczne pasjonatów metod przelewowych oraz espresso."
+        },
+        {
+            "key": "field_opinie_count",
+            "label": "Liczba wyświetlanych opinii",
+            "name": "count",
+            "type": "number",
+            "default_value": 3,
+            "min": 1,
+            "max": 12,
+            "step": 1
+        },
+        {
+            "key": "field_opinie_show_all_link",
+            "label": "Pokaż przycisk do pełnego archiwum",
+            "name": "show_all_link",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/opinie"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true
+}

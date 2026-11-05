@@ -1,0 +1,53 @@
+{
+    "key": "group_block_faq",
+    "title": "Blok: Sekcja FAQ",
+    "fields": [
+        {
+            "key": "field_faq_eyebrow",
+            "label": "Nadtytuł sekcji",
+            "name": "eyebrow",
+            "type": "text",
+            "default_value": "Baza Wiedzy Baristy"
+        },
+        {
+            "key": "field_faq_title",
+            "label": "Tytuł sekcji",
+            "name": "title",
+            "type": "text",
+            "required": 1,
+            "default_value": "Często zadawane pytania"
+        },
+        {
+            "key": "field_faq_description",
+            "label": "Opis sekcji",
+            "name": "description",
+            "type": "text",
+            "default_value": "Wszystko co powinieneś wiedzieć o świeżości ziaren, profilach sensorycznych i doborze mielenia."
+        },
+        {
+            "key": "field_faq_count",
+            "label": "Liczba wyświetlanych pytań",
+            "name": "count",
+            "type": "number",
+            "default_value": 4,
+            "min": 1,
+            "max": 20,
+            "step": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/faq"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true
+}

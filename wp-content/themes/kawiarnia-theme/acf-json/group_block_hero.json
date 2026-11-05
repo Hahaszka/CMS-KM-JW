@@ -1,0 +1,124 @@
+{
+    "key": "group_block_hero",
+    "title": "Blok: Hero Palarni",
+    "fields": [
+        {
+            "key": "field_hero_badge",
+            "label": "Etykieta nad tytułem",
+            "name": "badge",
+            "type": "text",
+            "default_value": "Rzemieślnicza Palarnia Kawy"
+        },
+        {
+            "key": "field_hero_title",
+            "label": "Tytuł główny",
+            "name": "title",
+            "type": "text",
+            "required": 1,
+            "default_value": "Ziarna z plantacji, które znamy z imienia"
+        },
+        {
+            "key": "field_hero_text",
+            "label": "Opis / Podtytuł",
+            "name": "text",
+            "type": "textarea",
+            "rows": 3,
+            "default_value": "Wypalamy kawy jednorodne (Single Origin) i limitowane mikroloty z Etiopii, Kolumbii, Kenii oraz Panamy. Z zachowaniem pełnego profilu sensorycznego odmiany i terroir."
+        },
+        {
+            "key": "field_hero_image",
+            "label": "Zdjęcie wyróżniające (opcjonalne)",
+            "name": "image",
+            "type": "image",
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_hero_button",
+            "label": "Główny przycisk CTA",
+            "name": "button",
+            "type": "link",
+            "return_format": "array"
+        },
+        {
+            "key": "field_hero_sec_btn_title",
+            "label": "Tytuł drugiego przycisku",
+            "name": "secondary_button_title",
+            "type": "text",
+            "default_value": "Dziennik palarni"
+        },
+        {
+            "key": "field_hero_sec_btn_url",
+            "label": "Link drugiego przycisku",
+            "name": "secondary_button_url",
+            "type": "text",
+            "default_value": "#features"
+        },
+        {
+            "key": "field_hero_show_specs",
+            "label": "Wyświetlaj metryki jakości",
+            "name": "show_specs",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_hero_spec_1_val",
+            "label": "Wartość metryki 1",
+            "name": "spec_1_val",
+            "type": "text",
+            "default_value": "86-91"
+        },
+        {
+            "key": "field_hero_spec_1_label",
+            "label": "Etykieta metryki 1",
+            "name": "spec_1_label",
+            "type": "text",
+            "default_value": "SCA Cupping Score"
+        },
+        {
+            "key": "field_hero_spec_2_val",
+            "label": "Wartość metryki 2",
+            "name": "spec_2_val",
+            "type": "text",
+            "default_value": "100%"
+        },
+        {
+            "key": "field_hero_spec_2_label",
+            "label": "Etykieta metryki 2",
+            "name": "spec_2_label",
+            "type": "text",
+            "default_value": "Transparent Trade"
+        },
+        {
+            "key": "field_hero_spec_3_val",
+            "label": "Wartość metryki 3",
+            "name": "spec_3_val",
+            "type": "text",
+            "default_value": "Omni"
+        },
+        {
+            "key": "field_hero_spec_3_label",
+            "label": "Etykieta metryki 3",
+            "name": "spec_3_label",
+            "type": "text",
+            "default_value": "Profil pod filtr i espresso"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/hero"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true
+}

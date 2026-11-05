@@ -1,0 +1,88 @@
+{
+    "key": "group_block_usp",
+    "title": "Blok: Filary Jakości / USP",
+    "fields": [
+        {
+            "key": "field_usp_eyebrow",
+            "label": "Nadtytuł sekcji",
+            "name": "eyebrow",
+            "type": "text",
+            "default_value": "Filozofia Rzemiosła"
+        },
+        {
+            "key": "field_usp_title",
+            "label": "Tytuł sekcji",
+            "name": "title",
+            "type": "text",
+            "required": 1,
+            "default_value": "Od krzewu po filiżankę"
+        },
+        {
+            "key": "field_usp_description",
+            "label": "Opis sekcji",
+            "name": "description",
+            "type": "text",
+            "default_value": "Trzy filary, które definiują jakość w segmencie Third Wave Coffee"
+        },
+        {
+            "key": "field_usp_item_1_title",
+            "label": "Filar 1 - Tytuł",
+            "name": "item_1_title",
+            "type": "text",
+            "default_value": "Pochodzenie & Terroir"
+        },
+        {
+            "key": "field_usp_item_1_text",
+            "label": "Filar 1 - Opis",
+            "name": "item_1_text",
+            "type": "textarea",
+            "rows": 3,
+            "default_value": "Wyłącznie świeże zbiory z bezpośredniego importu. Podajemy wysokość upraw (m n.p.m.), odmianę botaniczną (Bourbon, Geisha, SL28) oraz precyzyjną metodę obróbki."
+        },
+        {
+            "key": "field_usp_item_2_title",
+            "label": "Filar 2 - Tytuł",
+            "name": "item_2_title",
+            "type": "text",
+            "default_value": "Profilowane Palenie"
+        },
+        {
+            "key": "field_usp_item_2_text",
+            "label": "Filar 2 - Opis",
+            "name": "item_2_text",
+            "type": "textarea",
+            "rows": 3,
+            "default_value": "Piecyk bębnowy i rygorystyczna krzywa RoR (Rate of Rise). Jasne palenie podkreśla naturalną kwasowość, nuty kwiatowe i owocowe zamiast goryczy spalenizny."
+        },
+        {
+            "key": "field_usp_item_3_title",
+            "label": "Filar 3 - Tytuł",
+            "name": "item_3_title",
+            "type": "text",
+            "default_value": "Metody Alternatywne"
+        },
+        {
+            "key": "field_usp_item_3_text",
+            "label": "Filar 3 - Opis",
+            "name": "item_3_text",
+            "type": "textarea",
+            "rows": 3,
+            "default_value": "Kompletne wyposażenie domowego baristy: drippery Hario V60, Chemex, Aeropress, filtry papierowe oraz żarnowe młynki manualne i elektryczne."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/usp"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true
+}

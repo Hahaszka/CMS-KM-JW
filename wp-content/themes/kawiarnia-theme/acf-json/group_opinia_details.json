@@ -1,0 +1,56 @@
+{
+    "key": "group_opinia_details",
+    "title": "Szczegóły opinii klienta",
+    "fields": [
+        {
+            "key": "field_opinia_ocena",
+            "label": "Ocena (1-5 gwiazdek)",
+            "name": "ocena",
+            "type": "number",
+            "instructions": "Wpisz ocenę w skali od 1 do 5 gwiazdek.",
+            "required": 1,
+            "default_value": 5,
+            "min": 1,
+            "max": 5,
+            "step": 1
+        },
+        {
+            "key": "field_opinia_miasto",
+            "label": "Miasto klienta",
+            "name": "miasto",
+            "type": "text",
+            "instructions": "np. Warszawa, Kraków, Poznań",
+            "required": 0,
+            "default_value": "Warszawa",
+            "placeholder": "Warszawa"
+        },
+        {
+            "key": "field_opinia_profil_kawy",
+            "label": "Oceniana kawa / metoda parzenia",
+            "name": "profil_kawy",
+            "type": "text",
+            "instructions": "np. Etiopia Yirgacheffe • Dripper V60",
+            "required": 0,
+            "default_value": "Etiopia Yirgacheffe • Drip V60",
+            "placeholder": "np. Kenia Nyeri • Aeropress"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "opinia"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Dodatkowe metadane dla typu treści Opinia",
+    "show_in_rest": 1
+}
