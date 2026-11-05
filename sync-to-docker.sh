@@ -30,3 +30,4 @@ echo "=========================================================="
 echo "  GOTOWE! Zawartość wp-content została zsynchronizowana."
 echo "  Strona: http://localhost:1234"
 echo "=========================================================="
+
