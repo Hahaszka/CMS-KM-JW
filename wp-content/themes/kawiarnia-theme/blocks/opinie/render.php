@@ -126,3 +126,4 @@ $opinie_query = new WP_Query( array(
         <?php endif; ?>
     </div>
 </section>
+

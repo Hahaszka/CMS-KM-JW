@@ -66,3 +66,4 @@ function kawiarnia_register_post_types() {
     ) );
 }
 add_action( 'init', 'kawiarnia_register_post_types' );
+
