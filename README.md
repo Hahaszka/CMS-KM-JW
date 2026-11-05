@@ -23,14 +23,31 @@ Projekt autorskiego motywu WordPress i sklepu internetowego realizowany w ramach
 
 ---
 
-## Uruchomienie projektu
+## Uruchomienie projektu i synchronizacja
 
 1. **Start kontenerów:**
    ```bash
    docker compose up -d
    ```
 
-2. **Zatrzymanie kontenerów:**
+2. **Automatyczna synchronizacja zmian do Dockera:**
+   Gdy zmienisz pliki motywu, style lub bloki i chcesz natychmiast wymusić ich nadpisanie oraz wyczyszczenie pamięci podręcznej PHP/WordPressa:
+   * **W Windows (dwuklik w folderze):** Uruchom plik **`sync-to-docker.bat`**
+   * **W PowerShell:**
+     ```powershell
+     .\sync-to-docker.ps1
+     ```
+   * **W Linux / macOS:**
+     ```bash
+     ./sync-to-docker.sh
+     ```
+   Skrypt automatycznie:
+   * Sprawdza i w razie potrzeby uruchamia kontenery,
+   * Kopiuje i nadpisuje wszystkie pliki motywu do wnętrza kontenera,
+   * Przeładowuje Apache i czyści cache kodu maszynowego PHP OPcache,
+   * Czyści wewnętrzny cache WordPressa i odświeża bezpośrednie odnośniki (WP-CLI).
+
+3. **Zatrzymanie kontenerów:**
    ```bash
    docker compose down
    ```
