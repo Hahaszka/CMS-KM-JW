@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "acf/faq",
+  "title": "Sekcja FAQ",
+  "description": "Najczęstsze pytania i odpowiedzi o parzenie i zamówienia wraz ze schema JSON-LD FAQPage",
+  "category": "kawiarnia",
+  "icon": "editor-help",
+  "keywords": ["faq", "pytania", "odpowiedzi", "pomoc", "kawa"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": false
+  },
+  "style": "file:./style.css"
+}

@@ -1,0 +1,123 @@
+/**
+ * Style bloku Opinie Klientów (acf/opinie)
+ */
+.block-opinie {
+    padding: 85px 0;
+    background: #ffffff;
+    border-top: 1px solid var(--c-border);
+    border-bottom: 1px solid var(--c-border);
+}
+
+.opinie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+    margin-bottom: 40px;
+}
+
+.opinia-card {
+    background: var(--c-kraft-paper);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-md);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--shadow-subtle);
+    transition: var(--transition);
+}
+
+.opinia-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card);
+    border-color: var(--c-roast-amber);
+}
+
+.opinia-rating {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+}
+
+.star-filled {
+    color: var(--c-roast-amber);
+}
+
+.star-empty {
+    color: #d1c4b5;
+}
+
+.opinia-quote {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--c-text-main);
+    font-style: italic;
+    margin-bottom: 24px;
+}
+
+.opinia-footer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    padding-top: 18px;
+}
+
+.opinia-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--c-crema);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid var(--c-border);
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-placeholder {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--c-roast-amber);
+}
+
+.opinia-author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.opinia-author-name a {
+    font-weight: 700;
+    color: var(--c-espresso-950);
+    font-size: 0.95rem;
+}
+
+.opinia-author-name a:hover {
+    color: var(--c-roast-amber);
+}
+
+.opinia-meta {
+    font-size: 0.8rem;
+    color: var(--c-text-muted);
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-top: 2px;
+}
+
+.opinia-coffee-tag {
+    color: var(--c-roast-amber);
+    font-weight: 600;
+}
+
+.opinie-actions {
+    margin-top: 20px;
+}

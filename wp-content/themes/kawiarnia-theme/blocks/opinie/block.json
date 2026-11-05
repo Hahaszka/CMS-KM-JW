@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "acf/opinie",
+  "title": "Opinie Klientów",
+  "description": "Dynamiczna lista rekomendacji i recenzji pobierana z CPT Opinia z ocenami i miejscowością",
+  "category": "kawiarnia",
+  "icon": "format-quote",
+  "keywords": ["opinie", "recenzje", "rekomendacje", "klienci", "kawa"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "align": false
+  },
+  "style": "file:./style.css"
+}
