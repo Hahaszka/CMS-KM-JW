@@ -9,6 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+/**
+ * Konfiguracja wsparcia motywu
+ */
 function kawiarnia_setup() {
     // Wsparcie dla tagu <title> w sekcji head
     add_theme_support( 'title-tag' );
@@ -35,6 +38,10 @@ function kawiarnia_setup() {
         'script',
     ) );
 
+    // Wsparcie stylów edytora i responsywnych osadzeń Gutenberga
+    add_theme_support( 'align-wide' );
+    add_theme_support( 'responsive-embeds' );
+
     // Rejestracja menu nawigacyjnych
     register_nav_menus( array(
         'primary' => __( 'Menu główne', 'kawiarnia' ),
@@ -48,7 +55,7 @@ add_action( 'after_setup_theme', 'kawiarnia_setup' );
  */
 function kawiarnia_scripts() {
     // Styl główny z style.css
-    wp_enqueue_style( 'kawiarnia-style', get_stylesheet_uri(), array(), '0.1.0' );
+    wp_enqueue_style( 'kawiarnia-style', get_stylesheet_uri(), array(), '0.2.0' );
 
     // Dedykowany arkusz styli layoutu
     wp_enqueue_style(
@@ -85,3 +92,26 @@ function kawiarnia_scripts() {
     );
 }
 add_action( 'wp_enqueue_scripts', 'kawiarnia_scripts' );
+
+/**
+ * -----------------------------------------------------------------------------
+ * ACF Local JSON — automatyczny zapis i odczyt definicji pól w repozytorium
+ * -----------------------------------------------------------------------------
+ */
+add_filter( 'acf/settings/save_json', function( $path ) {
+    return get_theme_file_path( 'acf-json' );
+} );
+
+add_filter( 'acf/settings/load_json', function( $paths ) {
+    // Wyczyść domyślną ścieżkę i dodaj dedykowaną w motywie
+    unset( $paths[0] );
+    $paths[] = get_theme_file_path( 'acf-json' );
+    return $paths;
+} );
+
+/**
+ * Dołączenie modułów motywu
+ */
+require get_theme_file_path( 'inc/post-types.php' );
+require get_theme_file_path( 'inc/blocks.php' );
+require get_theme_file_path( 'inc/customizer.php' );

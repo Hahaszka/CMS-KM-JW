@@ -4,6 +4,11 @@
  *
  * @package Kawiarnia
  */
+
+$announcement = get_theme_mod(
+    'kawiarnia_announcement',
+    'Świeże wypały w każdy wtorek i czwartek • Ziarna Specialty 100% Arabica SCA 85+ • Darmowa dostawa od 150 zł'
+);
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -19,6 +24,15 @@
 <?php wp_body_open(); ?>
 
 <div id="page" class="site-wrapper">
+    <?php if ( ! empty( $announcement ) ) : ?>
+        <!-- Pasek ogłoszeń (Dane globalne z Customizera) -->
+        <div class="roastery-strip">
+            <div class="site-container strip-inner">
+                <span><?php echo esc_html( $announcement ); ?></span>
+            </div>
+        </div>
+    <?php endif; ?>
+
     <header id="masthead" class="site-header">
         <div class="site-container header-inner">
             <div class="site-branding">
@@ -41,6 +55,7 @@
                     'fallback_cb'    => function() {
                         echo '<ul id="primary-menu" class="nav-menu">';
                         echo '<li><a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html__( 'Strona Główna', 'kawiarnia' ) . '</a></li>';
+                        echo '<li><a href="' . esc_url( home_url( '/opinie/' ) ) . '">' . esc_html__( 'Opinie', 'kawiarnia' ) . '</a></li>';
                         wp_list_pages( array( 'title_li' => '', 'depth' => 1 ) );
                         echo '</ul>';
                     },
