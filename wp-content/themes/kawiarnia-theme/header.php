@@ -59,7 +59,7 @@ $announcement = get_theme_mod(
                         wp_list_pages( array(
                             'title_li' => '',
                             'depth'    => 1,
-                            'exclude'  => get_option( 'page_on_front' ),
+                            'exclude'  => get_option('page_on_front'),
                         ) );
                         echo '</ul>';
                     },
