@@ -56,7 +56,11 @@ $announcement = get_theme_mod(
                         echo '<ul id="primary-menu" class="nav-menu">';
                         echo '<li><a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html__( 'Strona Główna', 'kawiarnia' ) . '</a></li>';
                         echo '<li><a href="' . esc_url( home_url( '/opinie/' ) ) . '">' . esc_html__( 'Opinie', 'kawiarnia' ) . '</a></li>';
-                        wp_list_pages( array( 'title_li' => '', 'depth' => 1 ) );
+                        wp_list_pages( array(
+                            'title_li' => '',
+                            'depth'    => 1,
+                            'exclude'  => get_option( 'page_on_front' ),
+                        ) );
                         echo '</ul>';
                     },
                 ) );
