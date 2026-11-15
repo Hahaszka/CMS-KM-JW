@@ -123,3 +123,4 @@ add_filter( 'acf/settings/load_json', function( $paths ) {
 require get_theme_file_path( 'inc/post-types.php' );
 require get_theme_file_path( 'inc/blocks.php' );
 require get_theme_file_path( 'inc/customizer.php' );
+require get_theme_file_path( 'inc/woocommerce.php' );
