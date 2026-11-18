@@ -68,6 +68,10 @@ WooCommerce jest aktywne w lokalnym środowisku. Ustawiona konfiguracja sklepu:
 - Strefa wysyłki „Polska”: opłata stała 15 zł oraz darmowa wysyłka od 200 zł.
 - Płatności: przelew bankowy i płatność przy odbiorze.
 
+### Koszyk i zamówienie
+
+Strony Koszyk i Zamówienie korzystają z klasycznych shortcode'ów `[woocommerce_cart]` i `[woocommerce_checkout]`. Wybraliśmy je, ponieważ projekt rozszerza WooCommerce hookami PHP i nadpisaniem szablonu pustej listy produktów. Mini-koszyk w nagłówku aktualizuje licznik przez fragmenty AJAX. W archiwach produktów włączono przyciski AJAX dodające do koszyka.
+
 Plik [produkty-woocommerce.csv](produkty-woocommerce.csv) zawiera 15 produktów w kategoriach „Kawy ziarniste”, „Akcesoria” i „Sprzęt do parzenia”. Kawa Kolumbia Huila jest produktem wariantowym z gramaturami 250 g i 1 kg; wszystkie rekordy mają unikalne SKU.
 
 Import wykonuje się w panelu WordPress: **Produkty → Importuj**, wybierz `produkty-woocommerce.csv`, sprawdź automatyczne mapowanie kolumn i uruchom importer. Przy ponownym imporcie zaznacz aktualizację istniejących produktów, dopasowując je po SKU. Po imporcie sprawdź warianty produktu Kolumbia Huila oraz przypisanie kategorii.

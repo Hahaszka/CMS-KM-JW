@@ -66,6 +66,13 @@ $announcement = get_theme_mod(
                 ) );
                 ?>
             </nav>
+
+            <?php if ( function_exists( 'WC' ) && WC()->cart ) : ?>
+                <a class="cart-link" href="<?php echo esc_url( wc_get_cart_url() ); ?>">
+                    <?php esc_html_e( 'Koszyk', 'kawiarnia' ); ?>
+                    <span class="cart-count"><?php echo esc_html( WC()->cart->get_cart_contents_count() ); ?></span>
+                </a>
+            <?php endif; ?>
         </div>
     </header>
 

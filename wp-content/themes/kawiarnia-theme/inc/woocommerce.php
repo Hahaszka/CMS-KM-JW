@@ -103,3 +103,19 @@ add_action( 'woocommerce_before_shop_loop_item_title', function () {
         echo '<span class="badge badge--new">' . esc_html__( 'Nowość', 'kawiarnia' ) . '</span>';
     }
 }, 9 );
+
+add_filter( 'woocommerce_add_to_cart_fragments', function ( $fragments ) {
+    $cart_count = function_exists( 'WC' ) && WC()->cart
+        ? WC()->cart->get_cart_contents_count()
+        : 0;
+
+    $fragments['span.cart-count'] = '<span class="cart-count">' . esc_html( $cart_count ) . '</span>';
+
+    return $fragments;
+} );
+
+add_action( 'wp_enqueue_scripts', function () {
+    if ( class_exists( 'WooCommerce' ) ) {
+        wp_enqueue_script( 'wc-cart-fragments' );
+    }
+} );
