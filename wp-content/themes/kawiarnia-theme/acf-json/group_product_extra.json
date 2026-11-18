@@ -1,0 +1,64 @@
+{
+  "key": "group_product_extra",
+  "title": "Produkt — dodatkowe",
+  "fields": [
+    {
+      "key": "field_product_sklad",
+      "label": "Skład",
+      "name": "sklad",
+      "type": "wysiwyg",
+      "instructions": "Opisz skład produktu i szczegóły, które mają pojawić się w zakładce produktu.",
+      "required": 0,
+      "tabs": "all",
+      "toolbar": "basic",
+      "media_upload": 0,
+      "delay": 0
+    },
+    {
+      "key": "field_product_pochodzenie",
+      "label": "Pochodzenie",
+      "name": "pochodzenie",
+      "type": "text",
+      "instructions": "Podaj kraj, region lub gospodarstwo pochodzenia produktu.",
+      "required": 0,
+      "default_value": "",
+      "placeholder": "np. Kolumbia, Huila"
+    },
+    {
+      "key": "field_product_stopien_palenia",
+      "label": "Stopień palenia",
+      "name": "stopien_palenia",
+      "type": "select",
+      "choices": {
+        "jasny": "Jasny",
+        "sredni": "Średni",
+        "ciemny": "Ciemny"
+      },
+      "default_value": "sredni",
+      "allow_null": 1,
+      "multiple": 0,
+      "ui": 0,
+      "ajax": 0,
+      "return_format": "value",
+      "placeholder": "Wybierz stopień palenia"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "product"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "Dodatkowe informacje wyświetlane w zakładce produktu.",
+  "show_in_rest": 1
+}

@@ -1,0 +1,42 @@
+{
+  "key": "group_product_category_banner",
+  "title": "Kategoria produktu — baner",
+  "fields": [
+    {
+      "key": "field_product_category_baner",
+      "label": "Baner kategorii",
+      "name": "baner",
+      "type": "image",
+      "instructions": "Obraz wyświetlany nad listą produktów w archiwum kategorii.",
+      "required": 0,
+      "return_format": "id",
+      "preview_size": "medium",
+      "library": "all",
+      "min_width": 0,
+      "min_height": 0,
+      "min_size": 0,
+      "max_width": 0,
+      "max_height": 0,
+      "max_size": 0,
+      "mime_types": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "taxonomy",
+        "operator": "==",
+        "value": "product_cat"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "Baner graficzny dla archiwów kategorii produktów.",
+  "show_in_rest": 1
+}
